@@ -12,7 +12,7 @@ fishObj.prototype.init = function()
 	this.y = can1.height;
 }
 
-var i = 0;
+var i = 1;
 var p;
 
 function draw(p)
@@ -28,27 +28,12 @@ function clear()
 
 fishObj.prototype.draw = function()
 {
-	
-	while(i<10){
-	   setInterval(draw,5000,i);	
-	   if(i>=1){
-	   	setInterval(clear,2000,i);
-	   }
-       
-        i = i + 1;
-        if(i == 11){
-		break;
+	while(i<9){
+		setInterval(draw,1000*i,i);
+	   setInterval(clear,1000*(i+1),i);
+	   i +=1
 	}
-	}
-	
-
-//   setInterval(clear,1000);
-
-/*    if(i=9)
-    {
-    //	clearInterval(ST);
-    //	ctx1.clearRect(100, 100, 1000, 1000);
-    //	draw(10);
-    }
-*/
+	setInterval(draw,10000,10);
+	setInterval(clear,13000,10);
+	   	
 	}

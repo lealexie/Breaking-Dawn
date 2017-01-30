@@ -13,10 +13,6 @@ function init()
 	can1 = document.getElementById("canvas1");
 	ctx1 = can1.getContext("2d");
 
-	var now = Date.now();
-	deltaTime = now - lastTime;
-	lastTime = now;
-
 	fish = new fishObj;
 	fish.init();
 
@@ -28,7 +24,7 @@ function init()
 	
 	fish.draw();
 
-	gameloop();
+//	gameloop();
 }
 
 function gameloop()
@@ -49,3 +45,4 @@ function fillcanvas()
 	ctx1.fillStyle = gradient;
 	ctx1.fillRect(100, 100, 1000, 1000);
 }
+
