@@ -12,6 +12,7 @@ fishObj.prototype.init = function()
 	this.y = can1.height;
 }
 
+ 
 var i = 1;
 var p;
 
